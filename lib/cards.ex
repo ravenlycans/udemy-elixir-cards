@@ -17,7 +17,6 @@ defmodule Cards do
     for suit <- suits, card <- cards do
         "#{card} of #{suit}"
     end
-
   end
 
   @doc """
@@ -34,6 +33,9 @@ defmodule Cards do
     Enum.split(deck, hand_size)
   end
 
+  @doc """
+    Shuffles the `deck` in arguments and returns the shuffled deck.
+  """
   def shuffle(deck) do
     Enum.shuffle(deck)
   end
